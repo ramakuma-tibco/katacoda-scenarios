@@ -1,8 +1,10 @@
-Get kubernetes cluster info 
-`kubectl get nodes`{{execute}}
+This environment has a `launch.sh`{{execute}}
+
+You can get with `kubectl get nodes`{{execute}}
 
 Create a new pod manifest that specifies two containers:
-`cat > pod-multi-container.yaml <<EOF
+```
+cat > pod-multi-container.yaml <<EOF
 apiVersion: v1
 kind: Pod
 metadata:
@@ -20,4 +22,5 @@ spec:
     - name: side-car
       image: alpine:latest
       command: ["/usr/bin/tail", "-f", "/dev/null"]
-  restartPolicy: Never EOF`{{execute}}
+  restartPolicy: Never 
+  EOF```{{execute}}
