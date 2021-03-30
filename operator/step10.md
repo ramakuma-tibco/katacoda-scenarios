@@ -5,7 +5,7 @@ Let's now observe the default `controllers/podset_controller.go` file:
 This default controller requires additional logic so we can trigger our reconciler whenever kind: PodSet objects are added, updated, or deleted. We also want to trigger the reconciler whenever Pods owned by a given PodSet are added, updated, and deleted as well. To accomplish this. we modify the controller's SetupWithManager method.
 
 Modify the PodSet controller logic at controllers/podset_controller.go:
-
+```go
 package controllers
 
 import (
@@ -164,6 +164,7 @@ func (r *PodSetReconciler) SetupWithManager(mgr ctrl.Manager) error {
                 Owns(&corev1.Pod{}).
                 Complete(r)
 }
+```
 You can easily update this file by running the following command:
 
 `\cp /tmp/podset_controller.go controllers/podset_controller.go`{{execute}}

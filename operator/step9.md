@@ -10,7 +10,7 @@ Let's now modify the `PodSetSpec` and `PodSetStatus` of the PodSet Custom Resour
 
 
 It should look like the file below:
-
+```go
 package v1alpha1
 
 import (
@@ -60,6 +60,7 @@ type PodSetList struct {
 func init() {
         SchemeBuilder.Register(&PodSet{}, &PodSetList{})
 }
+```
 You can easily update this file by running the following command:
 
 `\cp /tmp/podset_types.go api/v1alpha1/podset_types.go`{{execute}}
