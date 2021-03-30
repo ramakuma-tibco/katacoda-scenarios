@@ -5,7 +5,7 @@ Use the --v flag to set a verbosity level. This will allow you to see the reques
 
 `kubectl get pods -n myproject --v=8`{{execute}}
 
-Use the oc proxy command to proxy local requests on port 8001 to the Kubernetes API:
+Use the kubectl proxy command to proxy local requests on port 8001 to the Kubernetes API:
 
 `kubectl proxy --port=8001`{{execute}}
 

@@ -42,7 +42,7 @@ Imperatively scale the ReplicaSet to 6 replicas:
 Imperatively scale down the ReplicaSet to 3 replicas:
 `kubectl scale replicaset myfirstreplicaset --replicas=3 -n myproject`{{execute}}
 
-The `oc scale` command interacts with the `/scale` endpoint:
+The `kubectl scale` command interacts with the `/scale` endpoint:
 `curl -X GET http://localhost:8001/apis/apps/v1/namespaces/myproject/replicasets/myfirstreplicaset/scale`{{execute}}
 
 Use the `PUT` method against the `/scale` endpoint to change the number of replicas to 5:
