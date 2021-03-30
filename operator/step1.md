@@ -20,5 +20,4 @@ spec:
     - name: side-car
       image: alpine:latest
       command: ["/usr/bin/tail", "-f", "/dev/null"]
-  restartPolicy: Never
-EOF`{{execute}}
+  restartPolicy: Never EOF`{{execute}}
