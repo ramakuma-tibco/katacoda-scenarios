@@ -3,7 +3,7 @@ Verify the currently available Kubernetes API versions:
 
 Use the --v flag to set a verbosity level. This will allow you to see the request/responses against the Kubernetes API:
 
-`kubectl get pods --v=8`{{execute}}
+`kubectl get pods -n myproject --v=8`{{execute}}
 
 Use the oc proxy command to proxy local requests on port 8001 to the Kubernetes API:
 
@@ -27,7 +27,7 @@ We can scope the response by only viewing all pods in a particular `namespace`:
 `curl -X GET http://localhost:8001/api/v1/namespaces/myproject/pods`{{execute}}
 
 Export the manifest associated with `my-two-container-pod` in `json` format:
-`kubectl get pods my-two-container-pod --export -o json > podmanifest.json`{{execute}}
+`kubectl get pods my-two-container-pod -n myproject --export -o json > podmanifest.json`{{execute}}
 
 Within the manifest, replace the 1.13 version of alpine with 1.14:
 `sed -i 's|nginx:1.13-alpine|nginx:1.14-alpine|g' podmanifest.json`{{execute}}
@@ -43,7 +43,7 @@ Delete the current pod by sending the `DELETE` request method:
 
 Verify the pod is in `Terminating` status:
 
-`kubectl get pods`{{execute}}
+`kubectl get pods -n myproject`{{execute}}
 
 Verify the pod no longer exists:
 `curl -X GET http://localhost:8001/api/v1/namespaces/myproject/pods/my-two-container-pod`{{execute}}

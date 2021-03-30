@@ -31,16 +31,16 @@ Create the ReplicaSet:
 `kubectl apply -f replica-set.yaml`{{execute}}
 
 In a new terminal window, select all pods that match `app=myfirstapp`:
-`kubectl get pods -l app=myfirstapp --show-labels -w`{{execute}}
+`kubectl get pods -n myproject -l app=myfirstapp --show-labels -w`{{execute}}
 
 Delete the pods and watch new ones spawn:
-`kubectl delete pod -l app=myfirstapp`{{execute}}
+`kubectl delete pod -n myproject -l app=myfirstapp`{{execute}}
 
 Imperatively scale the ReplicaSet to 6 replicas:
-`kubectl scale replicaset myfirstreplicaset --replicas=6`{{execute}}
+`kubectl scale replicaset  myfirstreplicaset --replicas=6 -n myproject`{{execute}}
 
 Imperatively scale down the ReplicaSet to 3 replicas:
-`kubectl scale replicaset myfirstreplicaset --replicas=3`{{execute}}
+`kubectl scale replicaset myfirstreplicaset --replicas=3 -n myproject`{{execute}}
 
 The `oc scale` command interacts with the `/scale` endpoint:
 `curl -X GET http://localhost:8001/apis/apps/v1/namespaces/myproject/replicasets/myfirstreplicaset/scale`{{execute}}

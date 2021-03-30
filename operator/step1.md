@@ -2,6 +2,9 @@ This environment has a `launch.sh`{{execute}}
 
 You can get with `kubectl get nodes`{{execute}}
 
+Create a namespace myproject
+`kubectl create namespace myproject`{{execute}}
+
 Create a new pod manifest that specifies two containers:
 ```
 cat > pod-multi-container.yaml <<EOF
@@ -31,10 +34,10 @@ EOF
   `kubectl create -f pod-multi-container.yaml`{{execute}}
 
   View the detail for the pod and look at the events:
-  `kubectl describe pod my-two-container-pod`{{execute}}
+  `kubectl describe pod my-two-container-pod -n myproject`{{execute}}
 
   Let's first execute a shell session inside the server container by using the -c flag:
-  `kubectl exec -it my-two-container-pod -c server -- /bin/sh`{{execute}}
+  `kubectl exec -it my-two-container-pod -n myproject -c server -- /bin/sh`{{execute}}
 
  Run some commands inside the server container:
  ```
@@ -46,7 +49,7 @@ exit
 ```{{execute}}
 
 Let's now execute a shell session inside the side-car container:
-`kubectl exec -it my-two-container-pod -c side-car -- /bin/sh`{{execute}}
+`kubectl exec -it my-two-container-pod -n myproject -c side-car -- /bin/sh`{{execute}}
 
 Run the same commands in side-car container. Each container within a pod runs it's own cgroup, but shares IPC, Network, and UTC (hostname) namespaces:
 
