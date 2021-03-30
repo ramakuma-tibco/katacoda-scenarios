@@ -1,5 +1,5 @@
 Get kubernetes cluster info 
-`kubectl get nodes` {{execute}}
+`kubectl get nodes`{{execute}}
 
 Create a new pod manifest that specifies two containers:
 `cat > pod-multi-container.yaml <<EOF
@@ -21,4 +21,4 @@ spec:
       image: alpine:latest
       command: ["/usr/bin/tail", "-f", "/dev/null"]
   restartPolicy: Never
-EOF` {{execute}}
+EOF`{{execute}}
