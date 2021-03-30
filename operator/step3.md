@@ -3,7 +3,8 @@ Get a list of all pods in the `myproject` Namespace:
 
 Create a ReplicaSet object manifest file:
 
-```cat > replica-set.yaml <<EOF
+```
+cat > replica-set.yaml <<EOF
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -23,9 +24,10 @@ spec:
         - name: nodejs
           image: openshiftkatacoda/blog-django-py
 EOF
-```
+```{{execute}}
 
 Create the ReplicaSet:
+
 `kubectl apply -f replica-set.yaml`{{execute}}
 
 In a new terminal window, select all pods that match `app=myfirstapp`:

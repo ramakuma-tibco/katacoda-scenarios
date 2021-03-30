@@ -32,7 +32,7 @@ spec:
     served: true
     storage: true
 EOF
-```
+```{{execute}}
 
 Create the CRD resource object:
 
@@ -67,7 +67,7 @@ spec:
   database: primarydb
   nodes: 3
 EOF
-```
+```{{execute}}
 Create the new object:
 
 `kubectl create -f wordpress-database.yaml`{{execute}}

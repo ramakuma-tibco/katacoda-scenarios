@@ -24,7 +24,7 @@ spec:
       command: ["/usr/bin/tail", "-f", "/dev/null"]
   restartPolicy: Never 
   EOF
-  ```
+  ```{{execute}}
 
   Create the pod by specifying the manifest:
   `kubectl create -f pod-multi-container.yaml`{{execute}}
@@ -33,7 +33,7 @@ spec:
   `kubectl describe pod my-two-container-pod`{{execute}}
 
   Let's first execute a shell session inside the server container by using the -c flag:
-  `kubectl` exec -it my-two-container-pod -c server -- /bin/sh`{{execute}}
+  `kubectl exec -it my-two-container-pod -c server -- /bin/sh`{{execute}}
 
  Run some commands inside the server container:
  ```
@@ -42,10 +42,13 @@ netstat -ntlp
 hostname
 ps
 exit
-```
+```{{execute}}
+
 Let's now execute a shell session inside the side-car container:
-`kubectl exec -it my-two-container-pod -c side-car -- /bin/sh`
+`kubectl exec -it my-two-container-pod -c side-car -- /bin/sh`{{execute}}
+
 Run the same commands in side-car container. Each container within a pod runs it's own cgroup, but shares IPC, Network, and UTC (hostname) namespaces:
+
 ```
 ip address
 netstat -ntlp

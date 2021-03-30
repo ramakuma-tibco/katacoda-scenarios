@@ -1,6 +1,7 @@
 Let's begin by inspecting the newly generated `api/v1alpha1/podset_types.go` file for our PodSet API:
 
 `cat api/v1alpha1/podset_types.go`{{execute}}
+
 In Kubernetes, every functional object (with some exceptions, i.e. ConfigMap) includes `spec` and `status`. Kubernetes functions by reconciling desired state (Spec) with the actual cluster state. We then record what is observed (Status).
 
 Also observe the `+kubebuilder` comment markers found throughout the file. `operator-sdk` makes use of a tool called controler-gen (from the controller-tools project) for generating utility code and Kubernetes YAML. More information on markers for config/code generation can be found here.

@@ -2,9 +2,11 @@ Verify the currently available Kubernetes API versions:
 `kubectl api-versions`{{execute}}
 
 Use the --v flag to set a verbosity level. This will allow you to see the request/responses against the Kubernetes API:
+
 `kubectl get pods --v=8`{{execute}}
 
 Use the oc proxy command to proxy local requests on port 8001 to the Kubernetes API:
+
 `kubectl proxy --port=8001`{{execute}}
 
 Open up another terminal by clicking the + button and select `Open New Terminal`.
@@ -40,6 +42,7 @@ Delete the current pod by sending the `DELETE` request method:
 `curl -X DELETE http://localhost:8001/api/v1/namespaces/myproject/pods/my-two-container-pod`{{execute}}
 
 Verify the pod is in `Terminating` status:
+
 `kubectl get pods`{{execute}}
 
 Verify the pod no longer exists:

@@ -28,7 +28,7 @@ spec:
             - name: helloworldport
               containerPort: 8080
 EOF
-```
+```{{execute}}
 
 Create the Deployment.
 
@@ -61,12 +61,12 @@ Attempt to scale the Deployment up and down. Although status is updated, pods wi
 ```
 kubectl scale deploy finalizer-test --replicas=5
 kubectl scale deploy finalizer-test --replicas=1
-```
+```{{execute}}
 
 ```
 kubectl get deploy
 kubectl get pods
-```
+```{{execute}}
 
 
 Update the Deployment with the Finalizer value unset.
@@ -99,7 +99,7 @@ spec:
             - name: helloworldport
               containerPort: 8080
 EOF
-```
+```{{execute}}
 
 Replace the Deployment.
 
@@ -109,4 +109,4 @@ The Deployment will now be deleted.
 ```
 kubectl get deploy
 kubectl get pods
-```
+```{{execute}}
