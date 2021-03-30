@@ -4,7 +4,7 @@ You can get with `kubectl get nodes`{{execute}}
 
 Create a new pod manifest that specifies two containers:
 ```
-cat >> pod-multi-container.yaml <<EOF
+cat > pod-multi-container.yaml <<EOF
 apiVersion: v1
 kind: Pod
 metadata:
@@ -23,7 +23,8 @@ spec:
       image: alpine:latest
       command: ["/usr/bin/tail", "-f", "/dev/null"]
   restartPolicy: Never 
-  EOF
+
+EOF
   ```{{execute}}
 
   Create the pod by specifying the manifest:
