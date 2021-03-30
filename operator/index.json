@@ -6,44 +6,56 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Kubernetes Manifests",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Basic Operations with the Kubernetes API",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Replica Sets",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Deployments/Finalizers",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Custom Resource Definitions",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Go-based Kubernetes Operator using Operator SDK",
         "text": "step6.md"
       },
       {
-        "title": "Step 7",
+        "title": "Creating a New Project",
         "text": "step7.md"
       },
       {
-        "title": "Step 8",
+        "title": "Creating the API and Controller",
         "text": "step8.md"
       },
       {
-        "title": "Step 9",
+        "title": "Defining the Spec and Status",
         "text": "step9.md"
       },
       {
-        "title": "Step 10",
+        "title": "Customizing the Operator Logic",
         "text": "step10.md"
+      },     
+      {
+        "title": "Running the Operator Locally (Outside the Cluster)",
+        "text": "step11.md"
+      },
+      {
+        "title": "Creating the PodSet Custom Resource",
+        "text": "step12.md"
+      },
+      {
+        "title": "Deleting the PodSet Custom Resource",
+        "text": "step13.md"
       }
     ],
     "intro": {
