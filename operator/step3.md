@@ -4,7 +4,7 @@ Get a list of all pods in the `myproject` Namespace:
 Create a ReplicaSet object manifest file:
 
 ```
-cat > replica-set.yaml <<EOF
+cat >> replica-set.yaml <<EOF
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:

@@ -1,6 +1,6 @@
 Create a manifest for a Deployment with a Finalizer:
 ```
-cat > finalizer-test.yaml<<EOF
+cat >> finalizer-test.yaml<<EOF
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -72,7 +72,7 @@ kubectl get pods
 Update the Deployment with the Finalizer value unset.
 
 ```
-cat > finalizer-test-remove.yaml<<EOF
+cat >> finalizer-test-remove.yaml<<EOF
 apiVersion: apps/v1
 kind: Deployment
 metadata:

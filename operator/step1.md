@@ -4,7 +4,7 @@ You can get with `kubectl get nodes`{{execute}}
 
 Create a new pod manifest that specifies two containers:
 ```
-cat > pod-multi-container.yaml <<EOF
+cat >> pod-multi-container.yaml <<EOF
 apiVersion: v1
 kind: Pod
 metadata:
