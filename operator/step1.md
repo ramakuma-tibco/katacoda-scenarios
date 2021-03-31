@@ -45,7 +45,6 @@ ip address
 netstat -ntlp
 hostname
 ps
-exit
 ```{{execute}}
 
 Let's now execute a shell session inside the side-car container:
@@ -57,5 +56,4 @@ Run the same commands in side-car container. Each container within a pod runs it
 ip address
 netstat -ntlp
 hostname
-exit
 ```{{execute}}
