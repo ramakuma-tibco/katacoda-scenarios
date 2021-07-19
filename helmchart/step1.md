@@ -1,6 +1,6 @@
 This environment has a `launch.sh`{{execute}}
 
-You can get with `kubectl get nodes`{{execute}}
+You can get nodes with `kubectl get nodes`{{execute}}
 
 Install helm
 ```
