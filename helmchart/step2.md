@@ -1,8 +1,10 @@
-Create a Helm chart `helm create demo`{{execute}}
-check generated files `tree demo`{{execute}}
+Create a Helm chart `helm create webpyapp`{{execute}}
+check generated files `tree webpyapp`{{execute}}
 
-Clone git repo
-`git clone  https://github.com/ramakuma-tibco/helmdemo.git`{{execute}}
+Helm Debug
+`helm install --debug --dry-run webpyapp webpyapp`{{execute}}
 
-Deploy helmchart 
-`helm install webpyapp helmdemo/webpyapp`{{execute}}
+
+
+
+
