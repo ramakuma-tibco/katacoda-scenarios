@@ -14,12 +14,12 @@
         "text": "step2.md"
       },
       {
-        "title": "Helm Template 1/2",
+        "title": "Helm Built-in Objects",
         "text": "step3.md"
       },
       {
-        "title": "Helm Template 2/2",
-        "text": "step4.md"
+        "title": "Helm Template and Pipeline",
+        "text": "step3a.md"
       },
       {
         "title": "Adding storage class",
