@@ -22,6 +22,10 @@
         "text": "step3a.md"
       },
       {
+        "title": "Helm repository",
+        "text": "step4.md"
+      },
+      {
         "title": "Adding storage class",
         "text": "step5.md"
       },
