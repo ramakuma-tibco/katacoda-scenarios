@@ -4,7 +4,7 @@ check genereated Template:
 
 Check cluster status in new tab:
 open a new tab and run following command:
-`watch kubectl get all -n helm-demo`{{execute}}
+`kubectl get all -n helm-demo`{{execute}}
 
 deploy application using helmfile
 `helmfile --state-values-set storage.storageClass=local-path sync`{{execute}}
@@ -18,6 +18,10 @@ Check kubernetres resources:
 
 List Helm release
 `helm ls -A`{{execute}}
+
+Get Output using curl command:
+`curl -s http://localhost:31108/visits-counter/`{{execute}}
+
 
 
 

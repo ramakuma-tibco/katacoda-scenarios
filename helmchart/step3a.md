@@ -32,6 +32,6 @@ Dry Run `helm install --debug --dry-run firstdryrun ./mychart`{{execute}}
  
 Check Helm Manifest `helm get manifest firstvalue`{{execute}}
  
-`kubectl describe configmaps firstvalue`{{execute}}
+`kubectl describe configmaps mychart-configmap`{{execute}}
 
 Unisntall the helm chart `helm uninstall firstvalue`{{execute}}
