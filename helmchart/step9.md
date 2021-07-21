@@ -31,5 +31,5 @@ apply the diff `helmfile apply`{{execute}}
 
 helmfile list command `helmfile list`{{execute}}
 check helm release `helm ls -n helm-demo`{{execute}}
-check release history `helm history webpyapp`{{execute}}
+check release history `helm history webpyapp -n helm-demo`{{execute}}
   
