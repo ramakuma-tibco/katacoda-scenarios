@@ -11,3 +11,6 @@ cd helmdemo
 helmfile sync
 ```{{execute}}
 
+List Helm release
+`helm ls -A`{{execute}}
+
