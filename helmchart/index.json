@@ -36,6 +36,10 @@
       {
         "title": "Deploy using helmfile",
         "text": "step8.md"
+      },
+      {
+        "title": "Helmfile diff/apply",
+        "text": "step9.md"
       }
     ],
     "intro": {
