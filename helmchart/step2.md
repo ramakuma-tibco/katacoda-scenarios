@@ -19,7 +19,7 @@ install the chart `helm install helm-demo-configmap ./mychart`{{execute}}
 
 List helm charts `helm ls`{{execute}}
 
-check resource in the cluster `kubectl get all`{{execute}}
+check resource in the cluster `kubectl get configmap`{{execute}}
 
 Check Helm Manifest `helm get manifest helm-demo-configmap`{{execute}}
 
