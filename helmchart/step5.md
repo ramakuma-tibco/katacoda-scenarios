@@ -5,11 +5,11 @@ kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisione
 
 
 Get list of storage class
-`kubectl get sc`
+`kubectl get sc`{{execute}}
 
 Set as default storage class
 `kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'`{{execute}}
 
 Get list of storage class
-`kubectl get sc`
+`kubectl get sc`{{execute}}
 
