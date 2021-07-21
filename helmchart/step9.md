@@ -1,10 +1,11 @@
 Helmfile upgrade
 Install helm diff plugin `helm plugin install https://github.com/databus23/helm-diff`{{execute}}
+change directory `cd helmdemo`{{execute}}
 check helm relases `helm ls -n helm-demo`{{execute}}
 
 Change on  of the deployment file
 ```
-cat << EOF > webpyapp/templates
+cat << EOF >webpyapp/templates/sleep-before.yaml
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -19,7 +20,7 @@ spec:
       containers:
       - name: update-app
         image: bash
-        command: ["sh",  "-c", "sleep 60"]
+        command: ["sh",  "-c", "sleep 30"]
       restartPolicy: Never
   backoffLimit: 4
   EOF
@@ -28,6 +29,7 @@ spec:
 check diff `helmfile diff`{{execute}}
 apply the diff `helmfile apply`{{execute}}
 
+helmfile list command `helmfile list`{{execute}}
 check helm release `helm ls -n helm-demo`{{execute}}
 check release history `helm history webpyapp`{{execute}}
   
