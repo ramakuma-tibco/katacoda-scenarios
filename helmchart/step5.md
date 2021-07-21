@@ -1,7 +1,15 @@
-Python web app:
+Adding storage class
+```
+kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/master/deploy/local-path-storage.yaml
+```{{execute}}
 
-Clone git repo
-`git clone  https://github.com/ramakuma-tibco/helmdemo.git`{{execute}}
 
-Deploy helmchart 
-`helm install webpyapp helmdemo/webpyapp`{{execute}}
+Get list of storage class
+`kubectl get sc`
+
+Set as default storage class
+`kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'`{{execute}}
+
+Get list of storage class
+`kubectl get sc`
+

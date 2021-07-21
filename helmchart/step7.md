@@ -1,12 +1,4 @@
-Create a helmfile:
+Python web app:
 
-```
-cat > helmfile.yaml <<EOF
-releases:
-- name: webpyapp
-  chart: ./webpyapp
-  wait: true
-EOF
-```{{execute}}
-
-check template `helmfile template`{{execute}}
+Clone git repo
+`git clone  https://github.com/ramakuma-tibco/helmdemo.git`{{execute}}
