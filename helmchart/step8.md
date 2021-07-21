@@ -20,7 +20,7 @@ List Helm release
 `helm ls -A`{{execute}}
 
 Get Output using curl command:
-`curl -s http://localhost:31108/visits-counter/`{{execute}}
+`curl -w '\n' http://localhost:31108/visits-counter/`{{execute}}
 
 
 
