@@ -1,7 +1,6 @@
 Create a helmfile:
 
 ```
-cd webpyapp
 cat > helmfile.yaml <<EOF
 releases:
 - name: webpyapp
