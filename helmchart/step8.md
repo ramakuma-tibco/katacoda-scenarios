@@ -1,2 +1,10 @@
 deploy application using helmfile
-`helmfile sync`{{execute}}
+
+```
+cd helmdemo
+helmfile sync
+```{{execute}}
+
+Check cluster status in new tab:
+open a new tab and run following command:
+watch kubectl get all -n helm-demo
