@@ -1,7 +1,7 @@
 #Built-in objects
 update the config map template
 ```
-cat << EOF >configmap.yaml
+cat << EOF >mychart/templates/configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:

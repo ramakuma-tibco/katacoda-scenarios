@@ -5,7 +5,7 @@ Delete auto generated templates `rm -rf mychart/templates/*`{{execute}}
 
 Create a config map
 ```
-cat << EOF >configmap.yaml
+cat << EOF >mychart/templates/configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
