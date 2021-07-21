@@ -23,8 +23,8 @@ spec:
         command: ["sh",  "-c", "sleep 30"]
       restartPolicy: Never
   backoffLimit: 4
-  EOF
-  ```{{execute}}
+EOF
+```{{execute}}
 
 check diff `helmfile diff`{{execute}}
 apply the diff `helmfile apply`{{execute}}
